@@ -21,14 +21,14 @@
     <td align="center" width="50%">
       <h3>🇮🇹 Italiano</h3>
       <p><strong>Documentazione completa in italiano</strong></p>
-      <p>Guida utente, funzionalità, FAQ e molto altro</p>
+      <p>Guida utente, funzionalità, FAQ e altro</p>
       <br>
       <a href="README_IT.md">
         <img src="https://img.shields.io/badge/📖_Leggi_in_Italiano-blue?style=for-the-badge" alt="Italian Documentation">
       </a>
     </td>
     <td align="center" width="50%">
-      <h3>�� Engnglish</h3>
+      <h3>🇺🇸 English</h3>
       <p><strong>Complete documentation in English</strong></p>
       <p>User guide, features, FAQ and more</p>
       <br>
@@ -71,7 +71,7 @@
       </ul>
     </td>
     <td width="50%">
-      <h4>�� English</h/h4>
+      <h4>🇺🇸 English</h/h4>
       <ul>
         <li>💰 <strong>Expense Management</strong> - Automatic balance calculation</li>
         <li>🧹 <strong>Cleaning Shifts</strong> - Automatic calendar with notifications</li>
@@ -99,7 +99,7 @@
 ### 2️⃣ Read Full Documentation / Leggi la Documentazione Completa
 
 [![Italian](https://img.shields.io/badge/🇮🇹_Italiano-blue?style=for-the-badge)](README_IT.md)
-[![English](https://img.shields.io/badge/��_Englishsh-red?style=for-the-badge)](README_EN.md)
+[![English](https://img.shields.io/badge/🇺🇸_English-red?style=for-the-badge)](README_EN.md)
 
 </div>
 
