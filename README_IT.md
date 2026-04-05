@@ -20,7 +20,7 @@
 - [Stack Tecnologico](#-stack-tecnologico)
 - [Installazione e Configurazione](#-installazione-e-configurazione)
 - [Struttura del Progetto](#-struttura-del-progetto)
-- [Contribuire](#-contribuire)
+- [Feedback e Supporto](#-feedback-e-supporto)
 - [Sicurezza](#-sicurezza)
 - [Licenza](#-licenza)
 - [Autore](#-autore)
@@ -577,34 +577,21 @@ roommate-app/
 
 ---
 
-## 🤝 Contribuire
+## 💬 Feedback e Supporto
 
-Contributi, issue e richieste di funzionalità sono benvenuti!
+Il tuo feedback aiuta a rendere RoomMate App migliore! Accogliamo:
 
-### Come Contribuire
+- 🐛 **Segnalazioni Bug**: Hai trovato qualcosa che non funziona? Faccelo sapere!
+- ✨ **Richieste Funzionalità**: Hai idee per nuove funzionalità? Condividile!
+- 💡 **Suggerimenti**: Modi per migliorare le funzionalità esistenti
+- 🆘 **Domande di Supporto**: Hai bisogno di aiuto per usare l'app?
 
-1. Fai il fork del progetto (se l'accesso al codice sorgente è concesso)
-2. Crea un branch per la funzionalità (`git checkout -b feature/FunzionalitàIncribile`)
-3. Committa le tue modifiche (`git commit -m 'Aggiungi FunzionalitàIncribile'`)
-4. Pusha al branch (`git push origin feature/FunzionalitàIncribile`)
-5. Apri una Pull Request
+### Come Fornire Feedback
 
-### Linee Guida
+1. **GitHub Issues**: [Apri una issue](https://github.com/AndreaBonn/RoomMatesByBonn/issues)
+2. **Email**: andreabonacci95@protonmail.com
 
-- Segui lo stile di codice esistente
-- Scrivi messaggi di commit descrittivi
-- Aggiungi commenti per codice complesso
-- Testa le tue modifiche prima del commit
-- Aggiorna la documentazione se necessario
-
-### Segnalare Bug
-
-Apri una issue includendo:
-- Descrizione dettagliata del problema
-- Passi per riprodurre
-- Comportamento atteso vs effettivo
-- Screenshot se applicabile
-- Informazioni ambiente (browser, OS, versione)
+Per linee guida dettagliate su come segnalare bug, richiedere funzionalità e ottenere supporto, vedi la nostra [Guida Feedback](./FEEDBACK_IT.md).
 
 ---
 
@@ -669,4 +656,4 @@ Se trovi utile questo progetto, considera di dargli una stella! ⭐
 
 ---
 
-**[🇬🇧 Switch to English version](./README.md)** | **[🔒 Politica di Sicurezza](./SECURITY_IT.md)** | **[📄 Licenza](./LICENSE.md)**
+**[🇬🇧 Switch to English version](./README.md)** | **[🔒 Politica di Sicurezza](./SECURITY_IT.md)** | **[� Feedback](./FEEDBACK_IT.md)** | **[�📄 Licenza](./LICENSE.md)**

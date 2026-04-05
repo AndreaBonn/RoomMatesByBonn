@@ -20,7 +20,7 @@
 - [Technology Stack](#-technology-stack)
 - [Installation & Setup](#-installation--setup)
 - [Project Structure](#-project-structure)
-- [Contributing](#-contributing)
+- [Feedback & Support](#-feedback--support)
 - [Security](#-security)
 - [License](#-license)
 - [Author](#-author)
@@ -577,34 +577,21 @@ roommate-app/
 
 ---
 
-## 🤝 Contributing
+## 💬 Feedback & Support
 
-Contributions, issues, and feature requests are welcome!
+Your feedback helps make RoomMate App better! We welcome:
 
-### How to Contribute
+- 🐛 **Bug Reports**: Found something not working? Let us know!
+- ✨ **Feature Requests**: Have ideas for new functionality? Share them!
+- 💡 **Suggestions**: Ways to improve existing features
+- 🆘 **Support Questions**: Need help using the app?
 
-1. Fork the project (if source code access is granted)
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### How to Provide Feedback
 
-### Guidelines
+1. **GitHub Issues**: [Open an issue](https://github.com/AndreaBonn/RoomMatesByBonn/issues)
+2. **Email**: andreabonacci95@protonmail.com
 
-- Follow existing code style
-- Write descriptive commit messages
-- Add comments for complex code
-- Test your changes before committing
-- Update documentation as needed
-
-### Reporting Bugs
-
-Open an issue including:
-- Detailed problem description
-- Steps to reproduce
-- Expected vs actual behavior
-- Screenshots if applicable
-- Environment information (browser, OS, version)
+For detailed guidelines on reporting bugs, requesting features, and getting support, see our [Feedback Guide](./FEEDBACK.md).
 
 ---
 
@@ -669,4 +656,4 @@ If you find this project useful, please consider giving it a star! ⭐
 
 ---
 
-**[🇮🇹 Torna alla versione Italiana](./README_IT.md)** | **[🔒 Security Policy](./SECURITY.md)** | **[📄 License](./LICENSE.md)**
+**[🇮🇹 Torna alla versione Italiana](./README_IT.md)** | **[🔒 Security Policy](./SECURITY.md)** | **[💬 Feedback](./FEEDBACK.md)** | **[📄 License](./LICENSE.md)**
