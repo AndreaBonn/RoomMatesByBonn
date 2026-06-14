@@ -1,297 +1,96 @@
-# Feedback & Support
+# Feedback and Support
 
-> **[🇮🇹 Leggi in Italiano](./FEEDBACK_IT.md)** | **🇬🇧 English**
+**English** | [Italiano](./FEEDBACK_IT.md)
 
----
+How to report bugs, request features, and get help with RoomMate App.
 
-Thank you for using RoomMate App! Your feedback helps make this application better for everyone. This document explains how you can share your thoughts, report issues, request features, and get support.
+## Where to reach out
 
-## 📋 Table of Contents
+- **GitHub Issues**: [open an issue](https://github.com/AndreaBonn/RoomMatesByBonn/issues) for bugs and feature requests
+- **Email**: andreabonacci95@protonmail.com for questions and support
 
-- [How to Provide Feedback](#how-to-provide-feedback)
-- [Reporting Bugs](#reporting-bugs)
-- [Requesting Features](#requesting-features)
-- [Getting Help](#getting-help)
-- [Community Guidelines](#community-guidelines)
-- [Contact Information](#contact-information)
+This project is maintained by one developer. Response times are typically 2 to 3 business days.
 
----
+## Reporting a bug
 
-## 💬 How to Provide Feedback
+Before reporting, check whether the issue already exists and whether your browser and device are up to date.
 
-We welcome all types of feedback about RoomMate App:
-
-### What You Can Share
-
-- 🐛 **Bug Reports**: Something not working as expected?
-- ✨ **Feature Requests**: Ideas for new functionality?
-- 💡 **Suggestions**: Ways to improve existing features?
-- 📝 **User Experience**: Thoughts on usability and design?
-- 🎉 **Success Stories**: How RoomMate App helped you?
-- 📚 **Documentation**: Unclear instructions or missing information?
-
-### Where to Share
-
-1. **GitHub Issues**: [Open an issue](https://github.com/AndreaBonn/RoomMatesByBonn/issues)
-2. **Email**: andreabonacci95@protonmail.com
-3. **In-App Feedback**: Use the feedback form in the application (coming soon)
-
----
-
-## 🐛 Reporting Bugs
-
-Found a bug? Help us fix it by providing detailed information.
-
-### Before Reporting
-
-1. **Check existing issues**: Your bug might already be reported
-2. **Try to reproduce**: Can you make it happen again?
-3. **Check your setup**: Is your browser/device up to date?
-
-### Bug Report Template
-
-When reporting a bug, please include:
+Include this information:
 
 ```markdown
-**Bug Description**
-A clear and concise description of what the bug is.
+**Description**
+What the bug is.
 
-**Steps to Reproduce**
+**Steps to reproduce**
 1. Go to '...'
 2. Click on '...'
-3. Scroll down to '...'
-4. See error
+3. See the error
 
-**Expected Behavior**
+**Expected behavior**
 What you expected to happen.
 
-**Actual Behavior**
-What actually happened.
-
-**Screenshots**
-If applicable, add screenshots to help explain the problem.
+**Actual behavior**
+What happened instead.
 
 **Environment**
-- Device: [e.g., Desktop, iPhone 12, Samsung Galaxy S21]
-- OS: [e.g., Windows 11, macOS 14, Android 13, iOS 17]
-- Browser: [e.g., Chrome 120, Firefox 121, Safari 17]
-- App Version: [e.g., 1.0.0 - found in user profile]
+- Device: e.g. Desktop, iPhone 12, Samsung Galaxy S21
+- OS: e.g. Windows 11, macOS 14, Android 13, iOS 17
+- Browser: e.g. Chrome 120, Firefox 121, Safari 17
+- App version: from your user profile
+- Online or offline when it happened
 
-**Additional Context**
-Any other information that might be relevant:
-- Does it happen every time or randomly?
-- Did it work before?
-- Are you using any browser extensions?
-- Are you online or offline?
+**Screenshots**
+If they help explain the problem.
 ```
 
-### Priority Levels
+Severity labels used when triaging: critical (crash, data loss, security), high (major feature broken), medium (minor feature broken, workaround exists), low (cosmetic).
 
-We categorize bugs by severity:
+## Requesting a feature
 
-- 🔴 **Critical**: App crashes, data loss, security issues
-- 🟠 **High**: Major features broken, significant usability issues
-- 🟡 **Medium**: Minor features broken, workarounds available
-- 🟢 **Low**: Cosmetic issues, minor inconveniences
+Before requesting, check existing requests and consider whether the idea fits the scope of a household management app.
 
----
-
-## ✨ Requesting Features
-
-Have an idea for a new feature? We'd love to hear it!
-
-### Before Requesting
-
-1. **Check existing requests**: Your idea might already be suggested
-2. **Consider the scope**: Does it fit RoomMate App's purpose?
-3. **Think about use cases**: How would it help you and others?
-
-### Feature Request Template
+Include this information:
 
 ```markdown
-**Feature Title**
-A short, descriptive title for your feature.
+**Title**
+A short, descriptive title.
 
-**Problem Statement**
-What problem does this feature solve?
-Example: "I'm always frustrated when..."
+**Problem**
+What problem this solves.
 
-**Proposed Solution**
-Describe how you envision this feature working.
+**Proposed solution**
+How you imagine it working.
 
-**Use Case**
-Explain a real-world scenario where this would be useful.
+**Use case**
+A real scenario where it would help.
 
-**Alternatives Considered**
-Have you thought of other ways to solve this problem?
-
-**Additional Context**
-- Would this be useful for most users or specific situations?
-- Are there similar features in other apps?
-- Any mockups or examples?
-
-**Priority for You**
-- [ ] Nice to have
-- [ ] Would be very useful
-- [ ] Critical for my use case
+**Alternatives**
+Other ways you considered solving the problem.
 ```
 
-### Feature Categories
+## Getting help
 
-Help us categorize your request:
+Start with the documentation:
 
-- 💰 **Expense Management**: Splitting bills, tracking payments
-- 🧹 **Cleaning & Chores**: Schedules, reminders, tracking
-- 🛒 **Shopping**: Lists, purchases, inventory
-- 📅 **Calendar & Events**: Scheduling, reminders
-- 📢 **Communication**: Announcements, polls, messaging
-- 🤖 **AI Features**: Smart suggestions, automation
-- 📱 **Mobile/PWA**: App installation, offline features
-- 🔒 **Security & Privacy**: Data protection, permissions
-- 🌍 **Localization**: Languages, regional features
-- 🎨 **UI/UX**: Design, usability, accessibility
-- 📊 **Analytics & Reports**: Insights, statistics, exports
-- 🔧 **Other**: Anything else
+- README: [English](./README.md) · [Italiano](./README_IT.md)
+- Security policy: [English](./SECURITY.md) · [Italiano](./SECURITY_IT.md)
+- License: [LICENSE.md](./LICENSE.md)
 
----
+Common questions:
 
-## 🆘 Getting Help
+- **Reset your password**: use the "Forgot password" link on the login page; you will receive a reset email.
+- **Use the app offline**: install it as a PWA; core features work offline and sync when the connection returns.
+- **Invite roommates**: go to House Settings and share the invite code.
+- **Export data**: most sections have PDF or CSV export.
+- **Set up AI features**: go to User Profile, then AI Settings, and add an API key from OpenAI, Anthropic, Gemini, or Groq.
+- **App not loading**: check your connection, clear the browser cache, and try another browser.
 
-Need help using RoomMate App? Here's how to get support.
+When contacting support, include your question, what you already tried, your environment, and screenshots if relevant.
 
-### Self-Help Resources
+## Conduct
 
-Before reaching out, try these resources:
-
-1. **README Documentation**: [English](./README.md) | [Italiano](./README_IT.md)
-   - Complete feature descriptions
-   - Step-by-step usage guides
-   - Installation instructions
-
-2. **Security Policy**: [English](./SECURITY.md) | [Italiano](./SECURITY_IT.md)
-   - Security best practices
-   - Account protection tips
-   - Data privacy information
-
-3. **License Information**: [License](./LICENSE.md)
-   - Usage terms
-   - Permissions and restrictions
-
-### Common Questions
-
-**Q: How do I reset my password?**
-A: Use the "Forgot Password" link on the login page. You'll receive a reset email.
-
-**Q: Can I use the app offline?**
-A: Yes! Install it as a PWA and core features work offline with automatic sync.
-
-**Q: How do I invite roommates?**
-A: Go to House Settings → Share the unique invite code with your roommates.
-
-**Q: Is my data secure?**
-A: Yes. We use Firebase with encryption, HTTPS, and strict security rules. See [Security Policy](./SECURITY.md).
-
-**Q: Can I export my data?**
-A: Yes. Most sections have export buttons for PDF/CSV downloads.
-
-**Q: How do I set up AI features?**
-A: Go to User Profile → AI Settings → Add your API key from OpenAI, Anthropic, Gemini, or Groq.
-
-**Q: The app isn't loading. What should I do?**
-A: Try these steps:
-1. Check your internet connection
-2. Clear browser cache and reload
-3. Try a different browser
-4. Check if Firebase services are operational
-
-### Contact Support
-
-If you can't find an answer:
-
-**Email**: andreabonacci95@protonmail.com
-
-**Response Time**: I aim to respond within 2-3 business days.
-
-**What to Include**:
-- Your question or issue
-- What you've already tried
-- Screenshots if relevant
-- Your environment (device, browser, OS)
+Keep reports clear and discussions on topic. Do not post passwords, API keys, or personal data in issues. Harassment and offensive language are not tolerated.
 
 ---
 
-## 🤝 Community Guidelines
-
-To maintain a positive and helpful community, please:
-
-### Do's ✅
-
-- **Be respectful**: Treat everyone with kindness and respect
-- **Be clear**: Provide detailed information in reports and requests
-- **Be patient**: Remember this is maintained by a single developer
-- **Be constructive**: Focus on solutions, not just problems
-- **Be helpful**: Share your knowledge with other users
-- **Search first**: Check if your question/issue already exists
-
-### Don'ts ❌
-
-- **Don't spam**: Avoid duplicate issues or excessive messages
-- **Don't demand**: Requests are welcome, demands are not
-- **Don't share private info**: Never post passwords, API keys, or personal data
-- **Don't be rude**: Harassment or offensive language won't be tolerated
-- **Don't go off-topic**: Keep discussions relevant to RoomMate App
-
----
-
-## 📞 Contact Information
-
-### Developer
-
-**Andrea Bonacci**
-- GitHub: [@AndreaBonn](https://github.com/AndreaBonn)
-- Email: andreabonacci95@protonmail.com
-
-### Repository
-
-- **GitHub**: [RoomMatesByBonn](https://github.com/AndreaBonn/RoomMatesByBonn)
-- **Issues**: [Report a bug or request a feature](https://github.com/AndreaBonn/RoomMatesByBonn/issues)
-
----
-
-## 🎯 What Happens Next?
-
-After you submit feedback:
-
-1. **Acknowledgment**: You'll receive a response confirming receipt
-2. **Review**: I'll review your feedback and may ask for clarification
-3. **Prioritization**: Issues and features are prioritized based on:
-   - Severity/impact
-   - Number of users affected
-   - Alignment with app goals
-   - Development complexity
-4. **Updates**: You'll be notified of progress and resolution
-5. **Implementation**: For accepted features, you'll see them in future releases
-
----
-
-## 🌟 Thank You!
-
-Your feedback is invaluable in making RoomMate App better. Every bug report, feature request, and suggestion helps improve the experience for all users.
-
-Thank you for being part of the RoomMate App community! 🏠
-
----
-
-## 📊 Feedback Statistics
-
-Want to see what others are saying?
-
-- **Open Issues**: Check [GitHub Issues](https://github.com/AndreaBonn/RoomMatesByBonn/issues)
-- **Closed Issues**: See what's been fixed
-- **Feature Roadmap**: Coming soon
-
----
-
-**Last Updated**: December 2024
-
-**[🏠 Back to README](./README.md)** | **[🇮🇹 Versione Italiana](./FEEDBACK_IT.md)** | **[🔒 Security](./SECURITY.md)** | **[📄 License](./LICENSE.md)**
+[Back to README](./README.md) · [Italiano](./FEEDBACK_IT.md) · [Security](./SECURITY.md) · [License](./LICENSE.md)

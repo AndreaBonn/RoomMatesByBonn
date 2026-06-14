@@ -1,659 +1,251 @@
-# 🏠 RoomMate App
+# RoomMate App
 
-> **🇮🇹 Italiano** | **[🇬🇧 Read in English](./README.md)**
+[English](./README.md) | **Italiano**
 
-[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-10.14-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![PWA](https://img.shields.io/badge/PWA-Enabled-5A0FC8?style=flat&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)
 
-**Applicazione web completa per la gestione della vita da coinquilini**
+Una Progressive Web App per gestire la convivenza tra coinquilini: spese con calcolo dei saldi, turni di pulizia, lista della spesa in tempo reale, manutenzioni, annunci, sondaggi, regole di casa con votazione e calendario unificato.
 
----
+Questo repository è la vetrina pubblica di RoomMate App. Documenta cosa fa l'applicazione e come è costruita. Il codice sorgente è privato; vedi [Licenza](#licenza).
 
-## 📖 Indice
+## Indice
 
-- [Cos'è RoomMate App?](#-cosè-roommate-app)
-- [Funzionalità Principali](#-funzionalità-principali)
-- [Come si Usa](#-come-si-usa)
-- [Stack Tecnologico](#-stack-tecnologico)
-- [Installazione e Configurazione](#-installazione-e-configurazione)
-- [Struttura del Progetto](#-struttura-del-progetto)
-- [Feedback e Supporto](#-feedback-e-supporto)
-- [Sicurezza](#-sicurezza)
-- [Licenza](#-licenza)
-- [Autore](#-autore)
+- [Panoramica](#panoramica)
+- [Funzionalità](#funzionalità)
+- [Come funziona](#come-funziona)
+- [Stack tecnologico](#stack-tecnologico)
+- [Architettura](#architettura)
+- [Struttura del repository](#struttura-del-repository)
+- [Sicurezza](#sicurezza)
+- [Feedback e supporto](#feedback-e-supporto)
+- [Licenza](#licenza)
+- [Autore](#autore)
 
----
+## Panoramica
 
-## 🎯 Cos'è RoomMate App?
+RoomMate App affronta gli attriti ricorrenti del vivere con altre persone: chi ha pagato cosa, a chi tocca pulire, cosa va aggiunto alla lista della spesa e cosa la casa ha deciso. Ogni casa raggruppa i propri membri e ogni funzionalità è circoscritta a quella casa.
 
-**RoomMate App** è una Progressive Web Application moderna e completa, progettata per semplificare la gestione della convivenza. Che tu sia uno studente universitario, un giovane professionista o chiunque condivida una casa, questa app fornisce tutti gli strumenti necessari per gestire la tua abitazione in modo efficiente e armonioso.
+L'app è una single-page application React appoggiata su Firebase (Authentication, Cloud Firestore, Hosting). Un piccolo servizio Node.js gestisce l'invio di email transazionali tramite Brevo. I dati si sincronizzano in tempo reale tra i dispositivi e il livello PWA mantiene disponibili offline le funzioni principali.
 
-### Perché RoomMate App?
+Funziona in italiano e in inglese, con cambio lingua dal profilo utente.
 
-Vivere con coinquilini può essere impegnativo. Dalla divisione equa delle spese al coordinamento delle pulizie, gestire una casa condivisa richiede organizzazione e comunicazione chiara. RoomMate App risolve queste sfide fornendo:
+## Funzionalità
 
-- **Trasparenza Finanziaria**: Traccia le spese condivise con calcolo automatico dei saldi e minimizzazione intelligente delle transazioni
-- **Pulizie Organizzate**: Calendari di pulizia generati dall'IA con rotazione automatica e promemoria
-- **Comunicazione Fluida**: Annunci, sondaggi e regole della casa tutto in un unico posto
-- **Coordinamento Intelligente**: Liste della spesa condivise, tracciamento manutenzioni e promemoria raccolta differenziata
-- **Supporto Offline**: Funzionalità PWA complete con modalità offline e sincronizzazione automatica
+### Spese e saldi
 
-### Per chi è pensata?
+- Suddivisione delle spese in parti uguali, per importo personalizzato o per percentuale
+- Calcolo dei saldi in tempo reale che minimizza il numero di transazioni necessarie a saldare
+- Spese ricorrenti per le bollette mensili (affitto, utenze, abbonamenti)
+- Categorie: bollette, spesa, affitto, pulizie, manutenzione
+- Grafici mensili e ripartizione per categoria
+- Esportazione PDF e CSV per qualsiasi intervallo di date
+- Richieste di rimborso e relativo tracciamento tra i membri
 
-- 🎓 Studenti universitari in appartamenti condivisi
-- 💼 Giovani professionisti in spazi di co-living
-- 👥 Gruppi di amici che condividono una casa
-- 🏘️ Chiunque gestisca un'abitazione condivisa
+### Turni di pulizia
 
----
+- Scenari multipli con frequenza settimanale, quindicinale o mensile
+- Rotazione automatica tra i membri con schemi personalizzabili
+- Tipi di mansione: cucina, bagno, generale, spazzatura e personalizzati
+- Generazione opzionale dei turni tramite AI in base a stanze, frequenza e preferenze dei membri
+- Tracciamento del completamento con timestamp e promemoria per i turni imminenti o in ritardo
+- Turni una tantum ed eccezionali
 
-## ✨ Funzionalità Principali
+### Lista della spesa
 
-### 💰 Gestione Avanzata delle Spese
+- Sincronizzazione in tempo reale su tutti i dispositivi
+- Categorie: alimentari, bevande, casa, cura personale
+- Livelli di priorità (alta, media, bassa)
+- Tracciamento di chi ha comprato cosa e quando
+- Conversione degli articoli acquistati in una spesa condivisa
 
-- **Divisione Intelligente**: Dividi le spese equamente, per importi personalizzati o per percentuale
-- **Calcolo Automatico dei Saldi**: Tracciamento in tempo reale con algoritmo di minimizzazione delle transazioni
-- **Spese Ricorrenti**: Imposta bollette mensili automatiche (affitto, utenze, abbonamenti)
-- **Categorie Spese**: Organizza per tipo (bollette, spesa, affitto, pulizia, manutenzione)
-- **Analisi Dettagliate**: Grafici mensili, suddivisione per categoria e insights sulle spese
-- **Capacità di Esportazione**: Genera report PDF/CSV per qualsiasi periodo
-- **Tracciamento Rimborsi**: Richiedi e traccia i soldi dovuti tra coinquilini
+### Calendario unificato
 
-### 🧹 Gestione Intelligente delle Pulizie
+- Vista unica di turni di pulizia, manutenzioni, raccolta rifiuti ed eventi
+- Eventi di casa personalizzati con descrizione
+- Filtri e codifica a colori per tipo di evento
+- Esportazione PDF per la stampa
 
-- **Scenari Multipli**: Crea diversi calendari di pulizia (settimanale, bisettimanale, mensile)
-- **Rotazione Flessibile**: Rotazione automatica tra coinquilini con pattern personalizzabili
-- **Tipi di Pulizia**: Cucina, bagno, generale, spazzatura e altro
-- **Generazione IA**: Lascia che l'IA crei calendari ottimizzati basati sulle preferenze
-- **Tracciamento Completamento**: Checklist con timestamp di completamento
-- **Promemoria Intelligenti**: Notifiche automatiche per compiti imminenti e scaduti
-- **Turni Speciali**: Aggiungi compiti di pulizia straordinari una tantum
+### Raccolta differenziata
 
-### 🛒 Lista della Spesa in Tempo Reale
+- Calendari di raccolta ricorrenti per tipo di rifiuto (organico, plastica, carta, vetro, metallo, pericolosi e altri)
+- Promemoria la sera prima del giorno di raccolta
+- Scenari multipli per stagioni o sedi diverse
 
-- **Sincronizzazione Live**: Aggiornamenti istantanei su tutti i dispositivi
-- **Categorie Intelligenti**: Categorizzazione automatica (cibo, bevande, casa, cura personale)
-- **Livelli di Priorità**: Segna gli articoli come alta, media o bassa priorità
-- **Tracciamento Acquisti**: Traccia chi ha comprato cosa e quando
-- **Creazione Auto-Spesa**: Converti gli articoli acquistati in spese condivise
-- **Notifiche Urgenti**: Avvisi per articoli ad alta priorità
+### Manutenzioni
 
-### 📅 Calendario Unificato
+- Attività con priorità (bassa, media, alta, urgente) e tracciamento dello stato
+- Assegnazione opzionale a un membro responsabile
+- Promemoria via email per le manutenzioni in sospeso
+- Storico completo delle attività
 
-- **Vista Tutto-in-Uno**: Visualizza turni di pulizia, manutenzioni, raccolta differenziata ed eventi
-- **Gestione Eventi**: Crea e gestisci eventi della casa con descrizioni
-- **Filtri Intelligenti**: Filtra per tipo di evento per viste mirate
-- **Codifica Colori**: Distinzione visiva tra diversi tipi di evento
-- **Opzioni di Esportazione**: Genera calendari PDF per la stampa
+### Comunicazione
 
-### ♻️ Gestione Raccolta Differenziata
+- Bacheca annunci con livelli di priorità e fissaggio in alto
+- Sondaggi a scelta singola o multipla con risultati in tempo reale
+- Invio via email di annunci e sondaggi
 
-- **Calendari Raccolta**: Imposta giorni ricorrenti per la raccolta
-- **Tipi Multipli**: Organico, plastica, carta, vetro, metallo, pericolosi e altro
-- **Promemoria Automatici**: Notifiche il giorno prima della raccolta
-- **Scenari Multipli**: Calendari diversi per stagioni o località diverse
+### Regole di casa
 
-### 🔧 Tracciamento Manutenzioni
+- Proposte di regole da parte di qualsiasi membro, approvate a maggioranza
+- Categorie (pulizie, spese, ospiti, rumore e altre)
+- Storico di modifiche e proposte
+- Esportazione PDF del regolamento completo
 
-- **Gestione Compiti**: Crea, assegna e traccia compiti di manutenzione
-- **Livelli di Priorità**: Organizza per urgenza (bassa, media, alta, urgente)
-- **Tracciamento Stato**: Monitora i progressi da segnalato a completato
-- **Notifiche Email**: Promemoria automatici per manutenzioni in sospeso
-- **Registro Storico**: Registro completo di tutte le attività di manutenzione
+### Contatti condivisi
 
-### 📢 Strumenti di Comunicazione
+- Rubrica per proprietario, idraulico, elettricista e altri contatti
+- Categorizzazione, tag e preferiti
+- Chiamata ed email con un clic
+- Esportazione PDF
 
-- **Bacheca Annunci**: Pubblica messaggi importanti con livelli di priorità
-- **Fissa Post Importanti**: Mantieni gli annunci critici in cima
-- **Sondaggi**: Crea sondaggi con opzioni singole o multiple
-- **Risultati in Tempo Reale**: Visualizza i risultati delle votazioni mentre arrivano
-- **Integrazione Email**: Invia annunci e sondaggi via email
+### Assistente AI
 
-### 📋 Sistema Regole della Casa
-
-- **Proposte Democratiche**: Qualsiasi membro può proporre nuove regole
-- **Sistema di Votazione**: Approva o rifiuta modifiche alle regole democraticamente
-- **Categorie Regole**: Organizza per tipo (pulizia, spese, ospiti, rumore, ecc.)
-- **Storico Regole**: Traccia tutte le modifiche e proposte
-- **Esportazione PDF**: Genera un regolamento completo della casa
+- Supporto per OpenAI, Anthropic Claude, Google Gemini e Groq
+- Chiavi API salvate nel browser o su Firestore, a scelta dell'utente
+- Generazione dei turni di pulizia con preferenza di provider e fallback automatico
 
-### 📞 Contatti Condivisi
-
-- **Rubrica Contatti**: Memorizza contatti importanti (proprietario, idraulico, elettricista, ecc.)
-- **Categorizzazione**: Organizza per ruolo e aggiungi tag personalizzati
-- **Preferiti**: Accesso rapido ai contatti usati frequentemente
-- **Click-to-Call/Email**: Comunicazione diretta dall'app
-- **Opzioni di Esportazione**: Genera liste di contatti PDF
-
-### 🤖 Integrazione Assistente IA
-
-- **Supporto Multi-Provider**: Funziona con OpenAI, Anthropic Claude, Google Gemini e Groq
-- **Storage Flessibile API Key**: Scegli tra storage locale (browser) o cloud (Firebase)
-- **Chatbot IA**: Ottieni aiuto e suggerimenti (interfaccia conversazionale)
-- **Generazione Calendari Intelligente**: L'IA crea calendari di pulizia ottimizzati basati sulle preferenze
-- **Preferenza Provider**: Imposta il tuo provider IA preferito con fallback automatico
-
-### 👥 Gestione Membri
-
-- **Membri Reali**: Account completi con autenticazione
-- **Membri Virtuali (NPC)**: Aggiungi coinquilini senza account per tracciare le spese
-- **Sistema Ruoli**: Ruoli admin e membro con permessi diversi
-- **Fusione Membri**: Combina profili duplicati quando qualcuno crea un account
-- **Sistema Inviti**: Codici invito univoci per unirsi alle case
-
-### 🌍 Supporto Multi-Lingua
-
-- **Inglese e Italiano**: Traduzioni complete per tutte le funzionalità
-- **Cambio Istantaneo**: Cambia lingua dal profilo utente
-- **Formattazione Localizzata**: Date, orari e valute adattate alla locale
-
-### 📱 Progressive Web App (PWA)
-
-- **Installabile**: Aggiungi alla schermata home su mobile e desktop
-- **Supporto Offline**: Le funzionalità principali funzionano senza connessione internet
-- **Notifiche Push**: Notifiche native per eventi importanti
-- **Auto-Sync**: Sincronizzazione automatica quando la connessione viene ripristinata
-- **Caricamento Veloce**: Caching ottimizzato per accesso istantaneo
-- **Auto-Aggiornamenti**: Aggiornamenti fluidi con notifica utente
-
-### 🔒 Sicurezza e Privacy
-
-- **Autenticazione Firebase**: Autenticazione sicura email/password
-- **Accesso Basato su Ruoli**: Permessi granulari per admin e membri
-- **Regole di Sicurezza Firestore**: Applicazione della sicurezza a livello database
-- **Crittografia HTTPS**: Tutte le comunicazioni crittografate
-- **Protezione API Key**: Opzioni di storage crittografato per chiavi provider IA
-- **Privacy Dati**: I tuoi dati appartengono a te
-
----
-
-## 🚀 Come si Usa
-
-### Iniziare
-
-1. **Accedi all'App**
-   - Visita l'URL dell'applicazione distribuita
-   - Oppure installala come PWA sul tuo dispositivo
-
-2. **Crea un Account**
-   - Clicca "Registrati" e fornisci email, nome e password
-   - Verifica il tuo indirizzo email
-
-3. **Configura la Tua Casa**
-   - **Crea una Nuova Casa**: Inserisci nome casa, indirizzo e dettagli
-   - **Unisciti a una Casa Esistente**: Usa il codice invito fornito dal tuo coinquilino
-
-4. **Invita Coinquilini**
-   - Vai alle Impostazioni Casa
-   - Condividi il codice invito univoco con i tuoi coinquilini
-   - Possono unirsi usando il codice dopo la registrazione
-
-### Gestire le Spese
-
-1. **Aggiungi una Spesa**
-   - Vai alla pagina "Spese"
-   - Clicca "Aggiungi Spesa"
-   - Inserisci titolo, importo, categoria e data
-   - Seleziona quali coinquilini sono coinvolti
-   - Scegli il metodo di divisione (equo, personalizzato o percentuale)
-   - Salva la spesa
-
-2. **Visualizza i Saldi**
-   - Controlla la sezione "Saldi" per vedere chi deve a chi
-   - L'app calcola automaticamente il numero minimo di transazioni necessarie
-   - Segna le transazioni come completate quando pagate
-
-3. **Traccia i Rimborsi**
-   - Vai alla pagina "Rimborsi"
-   - Crea richieste di rimborso per soldi dovuti
-   - Traccia lo stato (in sospeso/completato)
-
-4. **Analizza le Spese**
-   - Visualizza grafici delle spese mensili
-   - Vedi suddivisioni per categoria
-   - Esporta report come PDF o CSV
-
-### Organizzare le Pulizie
-
-1. **Crea uno Scenario di Pulizia**
-   - Vai alla pagina "Turni Pulizie"
-   - Clicca "Nuovo Scenario"
-   - Scegli la frequenza (settimanale, bisettimanale, mensile)
-   - Assegna compiti di pulizia a giorni specifici
-   - Seleziona quali coinquilini partecipano
-   - Attiva lo scenario
-
-2. **Usa l'IA per Generare il Calendario**
-   - Clicca "Generatore Calendario IA"
-   - Configura la tua API key (se non già impostata)
-   - Specifica le preferenze (stanze, frequenza, preferenze partecipanti)
-   - Lascia che l'IA crei un calendario ottimizzato
-   - Rivedi e modifica se necessario
-   - Salva lo scenario
-
-3. **Completa i Turni**
-   - Visualizza i tuoi turni assegnati sul calendario
-   - Spunta i compiti mentre li completi
-   - Segna il turno come completato
-   - Ricevi promemoria automatici per i turni imminenti
-
-4. **Gestisci Eccezioni**
-   - Aggiungi compiti di pulizia speciali una tantum
-   - Modifica i turni esistenti se necessario
-   - Traccia lo storico dei completamenti
-
-### Usare la Lista della Spesa
-
-1. **Aggiungi Articoli**
-   - Vai a "Lista Spesa"
-   - Clicca "Aggiungi Articolo"
-   - Inserisci nome prodotto, categoria e priorità
-   - Salva l'articolo
-
-2. **Fai la Spesa Insieme**
-   - Tutti i coinquilini vedono la stessa lista in tempo reale
-   - Spunta gli articoli mentre li compri
-   - Aggiungi il costo effettivo se desiderato
-
-3. **Crea Spesa dalla Lista**
-   - Dopo la spesa, clicca "Crea Spesa dalla Lista"
-   - L'app genera automaticamente una spesa con tutti gli articoli acquistati
-   - Modifica e salva
-
-### Gestire le Manutenzioni
-
-1. **Segnala un Problema**
-   - Vai alla pagina "Manutenzioni"
-   - Clicca "Nuovo Compito"
-   - Descrivi il problema, imposta la priorità
-   - Assegna a una persona responsabile (opzionale)
-   - Salva il compito
-
-2. **Traccia i Progressi**
-   - Aggiorna lo stato del compito mentre il lavoro procede
-   - Aggiungi note e aggiornamenti
-   - Segna come completato quando fatto
-   - Ricevi promemoria email per compiti in sospeso
-
-### Configurare la Raccolta Differenziata
-
-1. **Crea Calendario Raccolta**
-   - Vai a "Raccolta Differenziata"
-   - Clicca "Nuovo Scenario"
-   - Seleziona i tipi di rifiuto (organico, plastica, carta, vetro, ecc.)
-   - Assegna giorni di raccolta per ogni tipo
-   - Scegli la frequenza (settimanale/bisettimanale)
-   - Attiva lo scenario
-
-2. **Ricevi Promemoria**
-   - Ottieni notifiche automatiche la sera prima del giorno di raccolta
-   - Visualizza le raccolte imminenti sulla dashboard
-   - Controlla il calendario per il programma completo
-
-### Comunicazione e Regole
-
-1. **Pubblica Annunci**
-   - Vai alla pagina Casa
-   - Clicca "Nuovo Annuncio"
-   - Scrivi il tuo messaggio, imposta la priorità
-   - Fissa gli annunci importanti
-   - I coinquilini ricevono notifiche
-
-2. **Crea Sondaggi**
-   - Clicca "Nuovo Sondaggio"
-   - Inserisci domanda e opzioni
-   - Scegli scelta singola o multipla
-   - Imposta data di chiusura
-   - Visualizza i risultati in tempo reale
-
-3. **Proponi Regole della Casa**
-   - Vai a "Regole Casa"
-   - Clicca "Proponi Regola"
-   - Inserisci titolo, descrizione e categoria della regola
-   - Invia per votazione
-   - Le regole sono approvate a maggioranza
-
-### Usare il Calendario
-
-1. **Visualizza Eventi**
-   - Vai alla pagina "Calendario"
-   - Vedi tutti gli eventi, turni, manutenzioni e raccolte
-   - Filtra per tipo per vista mirata
-   - Clicca sugli eventi per i dettagli
-
-2. **Aggiungi Eventi**
-   - Clicca "Aggiungi Evento"
-   - Inserisci titolo, descrizione, data/ora
-   - Seleziona tipo di evento
-   - Scegli i partecipanti
-   - Salva l'evento
-
-3. **Esporta Calendario**
-   - Clicca il pulsante "Esporta"
-   - Scegli formato PDF
-   - Scarica e stampa se necessario
-
-### Configurare l'Assistente IA
-
-1. **Configura le API Key**
-   - Vai al Profilo Utente
-   - Clicca "Impostazioni IA"
-   - Scegli il tuo provider IA preferito (OpenAI, Anthropic, Gemini o Groq)
-   - Inserisci la tua API key
-   - Scegli la posizione di storage (browser locale o cloud)
-   - Salva le impostazioni
-
-2. **Imposta Preferenza Provider**
-   - Disponi i provider in ordine di preferenza
-   - L'app userà il primo provider disponibile
-   - Fallback automatico se il provider primario fallisce
-
-3. **Usa le Funzionalità IA**
-   - Generatore Calendario Pulizie IA
-   - Chatbot IA per assistenza (in arrivo)
-
-### Gestire il Tuo Profilo
-
-1. **Modifica Profilo**
-   - Clicca sul tuo nome/avatar
-   - Aggiorna nome, nickname, telefono
-   - Carica foto profilo
-   - Cambia preferenza lingua
-   - Salva le modifiche
-
-2. **Impostazioni Notifiche**
-   - Abilita/disabilita notifiche push
-   - Testa le notifiche
-   - Configura le preferenze di notifica
-
-3. **Lascia una Casa**
-   - Vai alle Impostazioni Casa
-   - Clicca "Lascia Casa"
-   - Conferma la tua decisione
-   - I tuoi dati rimangono per scopi storici
-
-### Uso Offline
-
-1. **Installa come PWA**
-   - Clicca il prompt di installazione quando appare
-   - Oppure usa il menu del browser: "Installa App" / "Aggiungi a Home"
-
-2. **Lavora Offline**
-   - Le funzionalità principali funzionano senza internet
-   - Le modifiche vengono messe in coda automaticamente
-   - I dati si sincronizzano quando la connessione viene ripristinata
-
-3. **Controlla Stato Sincronizzazione**
-   - Cerca l'indicatore online/offline
-   - Visualizza le modifiche in sospeso nelle impostazioni
-
----
-
-## 🛠 Stack Tecnologico
+### Gestione dei membri
+
+- Membri reali con account autenticati completi
+- Membri virtuali (NPC) per tracciare le spese di coinquilini senza account
+- Ruoli admin e membro con permessi differenti
+- Unione dei profili quando un membro virtuale crea un account reale
+- Codici di invito per entrare in una casa
+
+### Progressive Web App
+
+- Installabile su mobile e desktop
+- Funzioni principali disponibili offline tramite Service Worker e IndexedDB
+- Notifiche push per gli eventi rilevanti
+- Sincronizzazione automatica al ripristino della connessione
+- Aggiornamenti automatici con avviso all'utente
+
+## Come funziona
+
+1. Registrati con email e password, poi crea una casa o entra in una esistente con un codice di invito.
+2. Aggiungi i membri. Usa i membri virtuali per i coinquilini che non hanno ancora un account.
+3. Registra le spese man mano che avvengono e lascia che l'app calcoli chi deve cosa a chi, saldando con il minor numero di transazioni.
+4. Imposta uno scenario di pulizia (manualmente o con l'AI) e un calendario di raccolta rifiuti; entrambi alimentano il calendario condiviso.
+5. Mantieni allineati lista della spesa, annunci, sondaggi e regole di casa su tutti i dispositivi.
+
+## Stack tecnologico
 
 ### Frontend
 
-- **React 18.2** - Framework UI moderno con hooks
-- **TypeScript 5.3** - Sviluppo type-safe
-- **Vite 5.0** - Build tool velocissimo
-- **Tailwind CSS 3.3** - Framework CSS utility-first
-- **React Router 6.20** - Routing lato client
-- **Zustand 4.4** - State management leggero
-- **React Query 5.14** - Data fetching e caching
-- **React Hook Form 7.49** - Gestione form performante
-- **Zod 3.22** - Validazione schema TypeScript-first
-- **Lucide React 0.294** - Libreria icone moderna
-- **Recharts 3.5** - Libreria grafici componibile
-- **date-fns 3.0** - Libreria utility date moderna
-- **jsPDF 3.0 + jsPDF-AutoTable 5.0** - Generazione PDF lato client
+- React 18.2 con TypeScript 5.3
+- Build tool Vite 5
+- Tailwind CSS 3.3
+- React Router 6.20 per il routing
+- Zustand 4.4 per lo stato di autenticazione, con custom hook per il data fetching
+- React Hook Form 7.49 per i form
+- Recharts 3.5 per i grafici
+- date-fns 3.0 per la gestione delle date
+- jsPDF 3.0 con jsPDF-AutoTable 5.0 per l'esportazione PDF lato client
+- Lucide React per le icone
+- Sentry per il monitoraggio degli errori
 
-### Backend e Infrastruttura
+### Backend e infrastruttura
 
-- **Firebase Authentication** - Gestione utenti e autenticazione
-- **Cloud Firestore** - Database NoSQL in tempo reale
-- **Firebase Hosting** - Hosting statico veloce e sicuro
-- **Node.js + Express** - Microservizio email
-- **Brevo (Sendinblue)** - Servizio email transazionali
+- Firebase Authentication per account e sessioni
+- Cloud Firestore come database in tempo reale
+- Firebase Hosting per la distribuzione statica
+- Node.js con Express per il microservizio email
+- Brevo per le email transazionali
 
-### Integrazione IA
+### Provider AI
 
-- **OpenAI GPT** - Modello linguistico avanzato
-- **Anthropic Claude** - IA conversazionale
-- **Google Gemini** - Modello IA di Google
-- **Groq** - IA a inferenza veloce
+- OpenAI, Anthropic Claude, Google Gemini e Groq, selezionati per utente
 
-### DevOps e Strumenti
+### Strumenti
 
-- **Git** - Controllo versione
-- **npm** - Gestione pacchetti
-- **Firebase CLI** - Deployment e gestione
-- **ESLint** - Linting codice
-- **PostCSS** - Elaborazione CSS
+- ESLint e TypeScript per i controlli statici
+- Vitest per il frontend e per il servizio email
+- Husky con lint-staged per i controlli pre-commit
+- Firebase CLI per il deploy
 
----
+## Architettura
 
-## 📦 Installazione e Configurazione
+```mermaid
+flowchart TD
+    user([Browser utente])
+    pwa["Client PWA<br/>React + TypeScript + Tailwind"]
+    sw["Service Worker + IndexedDB<br/>cache offline"]
+    host["Firebase Hosting"]
+    auth["Firebase Authentication"]
+    db[("Cloud Firestore")]
+    email["Servizio email<br/>Express + Brevo"]
+    ai["Provider AI<br/>OpenAI / Anthropic / Gemini / Groq"]
 
-> **Nota**: Questo repository fornisce documentazione e istruzioni d'uso. Il codice sorgente è privato. Per richieste di accesso, contattare l'autore.
-
-### Prerequisiti
-
-- **Node.js** 18.0.0 o superiore
-- **npm** 9.0.0 o superiore
-- **Account Firebase** (tier gratuito disponibile)
-- **Account Brevo** per servizio email (opzionale)
-- **API Key Provider IA** (opzionale, per funzionalità IA)
-
-### Configurazione Firebase
-
-1. Crea un nuovo progetto su [Firebase Console](https://console.firebase.google.com/)
-2. Abilita **Authentication** con provider Email/Password
-3. Crea un database **Cloud Firestore**
-4. Abilita **Firebase Hosting**
-5. Scarica il file di configurazione
-
-### Configurazione Frontend
-
-Crea `frontend/.env`:
-
-```env
-VITE_FIREBASE_API_KEY=your_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
-VITE_EMAIL_SERVICE_URL=http://localhost:3001
+    user --> pwa
+    pwa <--> sw
+    pwa --> host
+    pwa --> auth
+    pwa <--> db
+    pwa --> email
+    pwa --> ai
+    email --> db
 ```
 
-### Configurazione Servizio Email (Opzionale)
+Il client comunica direttamente con Firebase per autenticazione e dati, con le Firestore Security Rules che applicano il controllo degli accessi a livello di database. Il servizio email è l'unico componente backend custom: legge i dati della casa da Firestore e invia le email tramite Brevo. Le chiamate AI partono direttamente dal client verso il provider scelto usando la chiave API dell'utente.
 
-Crea `email-service/.env`:
+## Struttura del repository
 
-```env
-PORT=3001
-BREVO_API_KEY=your_brevo_api_key
-SENDER_EMAIL=noreply@yourdomain.com
-SENDER_NAME=RoomMate App
-FIREBASE_PROJECT_ID=your_project_id
-```
+Il sorgente dell'applicazione è organizzato come segue. Questo repository vetrina contiene solo i file di documentazione elencati in fondo.
 
-### Regole di Sicurezza Firestore
-
-Distribuisci le regole di sicurezza:
-
-```bash
-firebase deploy --only firestore:rules
-```
-
-### Indici Firestore
-
-Distribuisci gli indici del database:
-
-```bash
-firebase deploy --only firestore:indexes
-```
-
-### Sviluppo Locale
-
-```bash
-# Installa dipendenze
-npm install
-cd frontend && npm install
-cd ../email-service && npm install
-
-# Avvia frontend (porta 5173)
-cd frontend
-npm run dev
-
-# Avvia servizio email (porta 3001) - opzionale
-cd email-service
-npm start
-```
-
-Apri il browser su `http://localhost:5173`
-
-### Build di Produzione
-
-```bash
-# Build frontend
-cd frontend
-npm run build
-
-# Anteprima build
-npm run preview
-```
-
-### Deploy su Firebase
-
-```bash
-# Deploy completo
-firebase deploy
-
-# Deploy solo hosting
-firebase deploy --only hosting
-
-# Deploy solo regole Firestore
-firebase deploy --only firestore:rules
-```
-
----
-
-## 📁 Struttura del Progetto
-
-```
+```text
 roommate-app/
-├── frontend/                    # Applicazione React
+├── frontend/                  # Applicazione React
 │   ├── src/
-│   │   ├── components/         # Componenti riutilizzabili
-│   │   │   ├── sections/       # Sezioni pagina
-│   │   │   ├── sondaggi/       # Componenti sondaggi
-│   │   │   ├── collapsible/    # UI collassabile
-│   │   │   └── skeletons/      # Skeleton di caricamento
-│   │   ├── pages/              # Pagine applicazione
-│   │   ├── services/           # Servizi Firebase & API
-│   │   ├── hooks/              # Hook React personalizzati
-│   │   ├── i18n/               # Internazionalizzazione
-│   │   ├── config/             # File di configurazione
-│   │   └── types/              # Tipi TypeScript
-│   ├── public/                 # Asset statici & PWA
-│   └── dist/                   # Build di produzione
-├── email-service/              # Microservizio Node.js
-│   ├── server.js              # Server Express
-│   └── check-manutenzioni-status.js
-├── documento_progetto/         # Documentazione tecnica
-├── firestore.rules            # Regole sicurezza Firestore
-├── firestore.indexes.json     # Indici Firestore
-├── firebase.json              # Configurazione Firebase
-├── README.md                  # README Inglese
-├── README_IT.md               # Questo file (Italiano)
-├── LICENSE.md                 # Informazioni licenza
-├── SECURITY.md                # Policy sicurezza (Inglese)
-└── SECURITY_IT.md             # Policy sicurezza (Italiano)
+│   │   ├── components/        # Componenti UI (modali, card, sezioni)
+│   │   ├── pages/             # Pagine dell'app (lazy loaded)
+│   │   ├── services/          # Accesso a Firebase e API
+│   │   ├── hooks/             # Custom React hook
+│   │   ├── store/             # Store di autenticazione Zustand
+│   │   ├── i18n/              # Traduzioni italiano e inglese
+│   │   ├── config/           # Configurazione Firebase e performance
+│   │   └── utils/            # Helper di esportazione e logica condivisa
+│   └── public/               # Manifest PWA, service worker, icone
+├── email-service/            # Microservizio email Node.js
+│   ├── server.js             # Server Express
+│   └── middleware/           # CORS, helmet, rate limiting
+├── firestore.rules           # Regole di sicurezza Firestore
+├── firestore.indexes.json    # Indici composti Firestore
+└── firebase.json             # Config hosting e security header
 ```
 
----
+## Sicurezza
 
-## 💬 Feedback e Supporto
+L'accesso ai dati della casa è applicato dalle Firestore Security Rules a livello di database, non soltanto nell'interfaccia. Il frontend è servito con una Content-Security-Policy stretta, HSTS e protezioni su frame e content-type. Il servizio email usa Helmet, una allowlist CORS e rate limiting.
 
-Il tuo feedback aiuta a rendere RoomMate App migliore! Accogliamo:
+Per segnalare una vulnerabilità, consulta [SECURITY_IT.md](./SECURITY_IT.md). È disponibile anche la versione inglese in [SECURITY.md](./SECURITY.md).
 
-- 🐛 **Segnalazioni Bug**: Hai trovato qualcosa che non funziona? Faccelo sapere!
-- ✨ **Richieste Funzionalità**: Hai idee per nuove funzionalità? Condividile!
-- 💡 **Suggerimenti**: Modi per migliorare le funzionalità esistenti
-- 🆘 **Domande di Supporto**: Hai bisogno di aiuto per usare l'app?
+## Feedback e supporto
 
-### Come Fornire Feedback
+Segnalazioni di bug, richieste di funzionalità e domande sono benvenute tramite le [GitHub Issues](https://github.com/AndreaBonn/RoomMatesByBonn/issues) o via email all'indirizzo andreabonacci95@protonmail.com.
 
-1. **GitHub Issues**: [Apri una issue](https://github.com/AndreaBonn/RoomMatesByBonn/issues)
-2. **Email**: andreabonacci95@protonmail.com
+Template e dettagli sono nella [guida al feedback](./FEEDBACK_IT.md).
 
-Per linee guida dettagliate su come segnalare bug, richiedere funzionalità e ottenere supporto, vedi la nostra [Guida Feedback](./FEEDBACK_IT.md).
+## Licenza
 
----
+La documentazione di questo repository è pubblicata a scopo di riferimento. Il codice sorgente dell'applicazione è privato e proprietario e non è incluso qui. Puoi usare l'applicazione pubblicata per scopi personali e non commerciali. Per richieste di licenza o accesso, contatta l'autore.
 
-## 🔒 Sicurezza
+Vedi [LICENSE.md](./LICENSE.md) per i termini completi.
 
-La sicurezza è una priorità assoluta. Consulta la nostra [Politica di Sicurezza](./SECURITY_IT.md) per:
-- Versioni supportate
-- Segnalazione vulnerabilità
-- Best practice di sicurezza
-- Misure di protezione dati
-
-**[🇬🇧 Security Policy in English](./SECURITY.md)**
-
----
-
-## 📄 Licenza
-
-Questa documentazione del progetto è fornita a scopo informativo. Il codice sorgente è privato e proprietario.
-
-**Uso Personale**: Sei libero di utilizzare l'applicazione distribuita per scopi personali e non commerciali.
-
-**Codice Sorgente**: Il codice sorgente non è disponibile pubblicamente. Per richieste di licenza o accesso, contattare l'autore.
-
-Vedi [LICENSE.md](./LICENSE.md) per maggiori dettagli.
-
----
-
-## 👨‍💻 Autore
+## Autore
 
 **Andrea Bonacci**
 
 - GitHub: [@AndreaBonn](https://github.com/AndreaBonn)
 - Email: andreabonacci95@protonmail.com
 
----
+## Supporta il progetto
 
-## 🙏 Ringraziamenti
-
-- **Firebase** per la robusta infrastruttura backend
-- **React Team** per l'eccellente framework
-- **Tailwind CSS** per il bellissimo sistema di design
-- **Lucide** per il set di icone moderne
-- **Recharts** per la libreria di grafici
-- **Tutti i provider IA** per rendere possibili funzionalità intelligenti
-- **Comunità open source** per gli strumenti e le librerie incredibili
+Se questo progetto ti è utile o interessante, lascia una stella su [GitHub](https://github.com/AndreaBonn/RoomMatesByBonn). Aiuta altri a scoprirlo.
 
 ---
 
-## 📊 Stato del Progetto
-
-**Stato**: ✅ Sviluppo Attivo
-
-**Versione**: 1.0.0
-
-**Ultimo Aggiornamento**: Dicembre 2024
-
----
-
-## 🌟 Cronologia Stelle
-
-Se trovi utile questo progetto, considera di dargli una stella! ⭐
-
----
-
-**[🇬🇧 Switch to English version](./README.md)** | **[🔒 Politica di Sicurezza](./SECURITY_IT.md)** | **[� Feedback](./FEEDBACK_IT.md)** | **[�📄 Licenza](./LICENSE.md)**
+[English](./README.md) · [Sicurezza](./SECURITY_IT.md) · [Feedback](./FEEDBACK_IT.md) · [Licenza](./LICENSE.md)

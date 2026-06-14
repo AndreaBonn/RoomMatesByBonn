@@ -1,32 +1,31 @@
 # License
 
-> **[🇮🇹 Leggi in Italiano](#licenza-italiano)** | **🇬🇧 English**
-
----
+[Leggi in italiano](#licenza-italiano) | **English**
 
 ## RoomMate App - License Agreement
 
-**Copyright © 2024 Andrea Bonacci. All rights reserved.**
+**Copyright © 2024-2026 Andrea Bonacci. All rights reserved.**
 
 ### Documentation License
 
-This repository contains documentation, usage instructions, and configuration examples for the RoomMate App. The documentation is provided under the following terms:
+This repository contains documentation, usage instructions, and configuration examples for RoomMate App. The documentation is provided under the following terms.
 
-**Permission is granted** to:
+You may:
+
 - Read and reference this documentation
-- Use the documentation for understanding the application
+- Use the documentation to understand the application
 - Share links to this repository
 
-**You may NOT**:
+You may not:
+
 - Redistribute or republish this documentation without attribution
 - Claim authorship of this documentation
 - Use this documentation for commercial purposes without permission
 
 ### Source Code
 
-**The source code of RoomMate App is PRIVATE and PROPRIETARY.**
+The source code of RoomMate App is private and proprietary. This repository does not contain the application source code. The source code is:
 
-This repository does NOT contain the application source code. The source code is:
 - Not publicly available
 - Not open source
 - Protected by copyright
@@ -34,15 +33,17 @@ This repository does NOT contain the application source code. The source code is
 
 ### Application Usage
 
-**Personal Use**: You are granted a non-exclusive, non-transferable license to use the deployed RoomMate App for personal, non-commercial purposes, subject to the following conditions:
+**Personal use**: you are granted a non-exclusive, non-transferable license to use the deployed RoomMate App for personal, non-commercial purposes, subject to the following conditions.
 
-✅ **You MAY**:
-- Use the application for managing your shared household
+You may:
+
+- Use the application to manage your shared household
 - Create an account and use all available features
 - Install the PWA on your personal devices
 - Share the application with your roommates
 
-❌ **You MAY NOT**:
+You may not:
+
 - Reverse engineer, decompile, or disassemble the application
 - Attempt to extract or copy the source code
 - Use the application for commercial purposes without authorization
@@ -54,15 +55,16 @@ This repository does NOT contain the application source code. The source code is
 
 - You retain all rights to the data you create within the application
 - The application processes your data according to the Privacy Policy
-- You are responsible for maintaining the confidentiality of your account credentials
+- You are responsible for keeping your account credentials confidential
 - The application uses Firebase services, subject to Google's terms of service
 
 ### Third-Party Services
 
 This application integrates with third-party services:
-- **Firebase** (Google LLC) - Subject to [Firebase Terms of Service](https://firebase.google.com/terms)
-- **AI Providers** (OpenAI, Anthropic, Google, Groq) - Subject to their respective terms
-- **Brevo** (Sendinblue) - Subject to [Brevo Terms of Service](https://www.brevo.com/legal/termsofuse/)
+
+- **Firebase** (Google LLC), subject to the [Firebase Terms of Service](https://firebase.google.com/terms)
+- **AI providers** (OpenAI, Anthropic, Google, Groq), subject to their respective terms
+- **Brevo** (Sendinblue), subject to the [Brevo Terms of Service](https://www.brevo.com/legal/termsofuse/)
 
 Your use of these services is subject to their respective terms and conditions.
 
@@ -82,13 +84,7 @@ This license is effective until terminated. Your rights under this license will 
 
 ### Source Code Access Requests
 
-If you are interested in:
-- Obtaining a license to the source code
-- Contributing to the project
-- Using the application for commercial purposes
-- Custom development or white-label solutions
-
-Please contact the author at the email address provided in the README.
+If you are interested in obtaining a license to the source code, contributing to the project, using the application for commercial purposes, or custom and white-label development, contact the author at the email address provided in the README.
 
 ### Modifications to License
 
@@ -96,13 +92,14 @@ The author reserves the right to modify these license terms at any time. Continu
 
 ### Governing Law
 
-This license shall be governed by and construed in accordance with the laws of Italy, without regard to its conflict of law provisions.
+This license is governed by and construed in accordance with the laws of Italy, without regard to its conflict of law provisions.
 
 ### Contact
 
 For licensing inquiries, permissions, or questions:
 
 **Andrea Bonacci**
+
 - GitHub: [@AndreaBonn](https://github.com/AndreaBonn)
 - Email: andreabonacci95@protonmail.com
 
@@ -110,114 +107,111 @@ For licensing inquiries, permissions, or questions:
 
 ## Licenza (Italiano)
 
-> **🇮🇹 Italiano** | **[🇬🇧 Read in English](#license)**
-
----
+[Read in English](#license) | **Italiano**
 
 ## RoomMate App - Accordo di Licenza
 
-**Copyright © 2024 Andrea Bonacci. Tutti i diritti riservati.**
+**Copyright © 2024-2026 Andrea Bonacci. Tutti i diritti riservati.**
 
-### Licenza Documentazione
+### Licenza della documentazione
 
-Questo repository contiene documentazione, istruzioni d'uso ed esempi di configurazione per RoomMate App. La documentazione è fornita secondo i seguenti termini:
+Questo repository contiene documentazione, istruzioni d'uso ed esempi di configurazione per RoomMate App. La documentazione è fornita secondo i seguenti termini.
 
-**È concesso il permesso** di:
+Puoi:
+
 - Leggere e consultare questa documentazione
-- Utilizzare la documentazione per comprendere l'applicazione
+- Usare la documentazione per comprendere l'applicazione
 - Condividere link a questo repository
 
-**NON è permesso**:
+Non puoi:
+
 - Ridistribuire o ripubblicare questa documentazione senza attribuzione
 - Rivendicare la paternità di questa documentazione
-- Utilizzare questa documentazione per scopi commerciali senza permesso
+- Usare questa documentazione per scopi commerciali senza permesso
 
-### Codice Sorgente
+### Codice sorgente
 
-**Il codice sorgente di RoomMate App è PRIVATO e PROPRIETARIO.**
+Il codice sorgente di RoomMate App è privato e proprietario. Questo repository non contiene il codice sorgente dell'applicazione. Il codice sorgente è:
 
-Questo repository NON contiene il codice sorgente dell'applicazione. Il codice sorgente è:
 - Non disponibile pubblicamente
 - Non open source
 - Protetto da copyright
 - Soggetto a termini di licenza separati
 
-### Utilizzo dell'Applicazione
+### Utilizzo dell'applicazione
 
-**Uso Personale**: Ti viene concessa una licenza non esclusiva e non trasferibile per utilizzare l'applicazione RoomMate App distribuita per scopi personali e non commerciali, soggetta alle seguenti condizioni:
+**Uso personale**: ti viene concessa una licenza non esclusiva e non trasferibile per usare l'applicazione RoomMate App distribuita per scopi personali e non commerciali, soggetta alle seguenti condizioni.
 
-✅ **PUOI**:
-- Utilizzare l'applicazione per gestire la tua casa condivisa
-- Creare un account e utilizzare tutte le funzionalità disponibili
+Puoi:
+
+- Usare l'applicazione per gestire la tua casa condivisa
+- Creare un account e usare tutte le funzionalità disponibili
 - Installare la PWA sui tuoi dispositivi personali
 - Condividere l'applicazione con i tuoi coinquilini
 
-❌ **NON PUOI**:
+Non puoi:
+
 - Effettuare reverse engineering, decompilare o disassemblare l'applicazione
 - Tentare di estrarre o copiare il codice sorgente
-- Utilizzare l'applicazione per scopi commerciali senza autorizzazione
+- Usare l'applicazione per scopi commerciali senza autorizzazione
 - Rivendere, sublicenziare o ridistribuire l'applicazione
 - Rimuovere o modificare avvisi di copyright o branding
-- Utilizzare l'applicazione in modo che violi le leggi applicabili
+- Usare l'applicazione in modo che violi le leggi applicabili
 
-### Dati e Privacy
+### Dati e privacy
 
 - Mantieni tutti i diritti sui dati che crei nell'applicazione
 - L'applicazione elabora i tuoi dati secondo la Privacy Policy
-- Sei responsabile del mantenimento della riservatezza delle credenziali del tuo account
-- L'applicazione utilizza servizi Firebase, soggetti ai termini di servizio di Google
+- Sei responsabile della riservatezza delle credenziali del tuo account
+- L'applicazione usa servizi Firebase, soggetti ai termini di servizio di Google
 
-### Servizi di Terze Parti
+### Servizi di terze parti
 
 Questa applicazione si integra con servizi di terze parti:
-- **Firebase** (Google LLC) - Soggetto ai [Termini di Servizio Firebase](https://firebase.google.com/terms)
-- **Provider IA** (OpenAI, Anthropic, Google, Groq) - Soggetti ai rispettivi termini
-- **Brevo** (Sendinblue) - Soggetto ai [Termini di Servizio Brevo](https://www.brevo.com/it/legal/termsofuse/)
+
+- **Firebase** (Google LLC), soggetto ai [Termini di Servizio Firebase](https://firebase.google.com/terms)
+- **Provider AI** (OpenAI, Anthropic, Google, Groq), soggetti ai rispettivi termini
+- **Brevo** (Sendinblue), soggetto ai [Termini di Servizio Brevo](https://www.brevo.com/it/legal/termsofuse/)
 
 Il tuo utilizzo di questi servizi è soggetto ai rispettivi termini e condizioni.
 
-### Esclusione di Garanzia
+### Esclusione di garanzia
 
 L'APPLICAZIONE È FORNITA "COSÌ COM'È", SENZA GARANZIE DI ALCUN TIPO, ESPLICITE O IMPLICITE, INCLUSE MA NON LIMITATE ALLE GARANZIE DI COMMERCIABILITÀ, IDONEITÀ PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE.
 
-IN NESSUN CASO L'AUTORE SARÀ RESPONSABILE PER QUALSIASI RECLAMO, DANNO O ALTRA RESPONSABILITÀ, SIA IN UN'AZIONE CONTRATTUALE, ILLECITO O ALTRO, DERIVANTE DA, O IN CONNESSIONE CON L'APPLICAZIONE O L'USO O ALTRE OPERAZIONI NELL'APPLICAZIONE.
+IN NESSUN CASO L'AUTORE SARÀ RESPONSABILE PER QUALSIASI RECLAMO, DANNO O ALTRA RESPONSABILITÀ, SIA IN UN'AZIONE CONTRATTUALE, ILLECITO O ALTRO, DERIVANTE DA O IN CONNESSIONE CON L'APPLICAZIONE O L'USO O ALTRE OPERAZIONI NELL'APPLICAZIONE.
 
-### Limitazione di Responsabilità
+### Limitazione di responsabilità
 
-NELLA MASSIMA MISURA CONSENTITA DALLA LEGGE APPLICABILE, IN NESSUN CASO ANDREA BONACCI SARÀ RESPONSABILE PER DANNI SPECIALI, INCIDENTALI, INDIRETTI O CONSEQUENZIALI DI QUALSIASI TIPO (INCLUSI, SENZA LIMITAZIONE, DANNI PER PERDITA DI PROFITTI AZIENDALI, INTERRUZIONE DELL'ATTIVITÀ, PERDITA DI INFORMAZIONI AZIENDALI O QUALSIASI ALTRA PERDITA PECUNIARIA) DERIVANTI DALL'USO O DALL'IMPOSSIBILITÀ DI UTILIZZARE L'APPLICAZIONE.
+NELLA MASSIMA MISURA CONSENTITA DALLA LEGGE APPLICABILE, IN NESSUN CASO ANDREA BONACCI SARÀ RESPONSABILE PER DANNI SPECIALI, INCIDENTALI, INDIRETTI O CONSEQUENZIALI DI QUALSIASI TIPO (INCLUSI, SENZA LIMITAZIONE, DANNI PER PERDITA DI PROFITTI AZIENDALI, INTERRUZIONE DELL'ATTIVITÀ, PERDITA DI INFORMAZIONI AZIENDALI O QUALSIASI ALTRA PERDITA PECUNIARIA) DERIVANTI DALL'USO O DALL'IMPOSSIBILITÀ DI USARE L'APPLICAZIONE.
 
 ### Risoluzione
 
-Questa licenza è efficace fino alla risoluzione. I tuoi diritti ai sensi di questa licenza termineranno automaticamente senza preavviso se non rispetti uno qualsiasi dei suoi termini. Alla risoluzione, devi cessare ogni uso dell'applicazione e distruggere tutte le copie in tuo possesso.
+Questa licenza è efficace fino alla risoluzione. I tuoi diritti ai sensi di questa licenza terminano automaticamente senza preavviso se non rispetti uno qualsiasi dei suoi termini. Alla risoluzione, devi cessare ogni uso dell'applicazione e distruggere tutte le copie in tuo possesso.
 
-### Richieste di Accesso al Codice Sorgente
+### Richieste di accesso al codice sorgente
 
-Se sei interessato a:
-- Ottenere una licenza per il codice sorgente
-- Contribuire al progetto
-- Utilizzare l'applicazione per scopi commerciali
-- Sviluppo personalizzato o soluzioni white-label
+Se sei interessato a ottenere una licenza per il codice sorgente, contribuire al progetto, usare l'applicazione per scopi commerciali, o a sviluppo personalizzato e soluzioni white-label, contatta l'autore all'indirizzo email indicato nel README.
 
-Contatta l'autore all'indirizzo email fornito nel README.
-
-### Modifiche alla Licenza
+### Modifiche alla licenza
 
 L'autore si riserva il diritto di modificare questi termini di licenza in qualsiasi momento. L'uso continuato dell'applicazione dopo le modifiche costituisce accettazione dei termini modificati.
 
-### Legge Applicabile
+### Legge applicabile
 
-Questa licenza sarà regolata e interpretata in conformità con le leggi italiane, senza riguardo alle sue disposizioni sui conflitti di legge.
+Questa licenza è regolata e interpretata in conformità con le leggi italiane, senza riguardo alle disposizioni sui conflitti di legge.
 
 ### Contatti
 
 Per richieste di licenza, permessi o domande:
 
 **Andrea Bonacci**
+
 - GitHub: [@AndreaBonn](https://github.com/AndreaBonn)
 - Email: andreabonacci95@protonmail.com
 
 ---
 
-**Last Updated / Ultimo Aggiornamento**: December 2024
+**Last updated / Ultimo aggiornamento**: June 2026
 
-**[🏠 Back to README](./README.md)** | **[🏠 Torna al README](./README_IT.md)**
+[Back to README](./README.md) | [Torna al README](./README_IT.md)
