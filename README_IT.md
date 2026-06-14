@@ -15,6 +15,7 @@ Questo repository è la vetrina pubblica di RoomMate App. Documenta cosa fa l'ap
 ## Indice
 
 - [Panoramica](#panoramica)
+- [Screenshot](#screenshot)
 - [Funzionalità](#funzionalità)
 - [Come funziona](#come-funziona)
 - [Stack tecnologico](#stack-tecnologico)
@@ -32,6 +33,23 @@ RoomMate App affronta gli attriti ricorrenti del vivere con altre persone: chi h
 L'app è una single-page application React appoggiata su Firebase (Authentication, Cloud Firestore, Hosting). Un piccolo servizio Node.js gestisce l'invio di email transazionali tramite Brevo. I dati si sincronizzano in tempo reale tra i dispositivi e il livello PWA mantiene disponibili offline le funzioni principali.
 
 Funziona in italiano e in inglese, con cambio lingua dal profilo utente.
+
+## Screenshot
+
+![Panoramica della casa](./docs/assets/casa-hub.png)
+
+*Panoramica della casa: membri, codice invito e accesso rapido a ogni sezione.*
+
+<table>
+  <tr>
+    <td width="50%"><img src="./docs/assets/spese-saldi.png" alt="Spese e saldi"><br><sub>Spese con calcolo automatico dei saldi e transazioni ridotte al minimo.</sub></td>
+    <td width="50%"><img src="./docs/assets/turni-pulizie.png" alt="Turni di pulizia"><br><sub>Turni di pulizia settimanali per membro e mansione.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./docs/assets/calendario.png" alt="Calendario unificato"><br><sub>Calendario unificato con turni ricorrenti ed eventi.</sub></td>
+    <td width="50%"><img src="./docs/assets/lista-spesa.png" alt="Lista della spesa"><br><sub>Lista della spesa in tempo reale con tracciamento degli acquisti.</sub></td>
+  </tr>
+</table>
 
 ## Funzionalità
 

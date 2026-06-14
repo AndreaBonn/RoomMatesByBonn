@@ -15,6 +15,7 @@ This repository presents RoomMate App to the public. It documents what the appli
 ## Table of contents
 
 - [Overview](#overview)
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [How it works](#how-it-works)
 - [Tech stack](#tech-stack)
@@ -32,6 +33,23 @@ RoomMate App covers the recurring friction of living with other people: who paid
 The app is a single-page React application backed by Firebase (Authentication, Cloud Firestore, Hosting). A small Node.js service handles transactional email through Brevo. Data syncs in real time across devices, and the PWA layer keeps core features available offline.
 
 It runs in English and Italian, with language switching from the user profile.
+
+## Screenshots
+
+![Household overview](./docs/assets/casa-hub.png)
+
+*Household overview: members, invite code, and quick access to every section.*
+
+<table>
+  <tr>
+    <td width="50%"><img src="./docs/assets/spese-saldi.png" alt="Expenses and balances"><br><sub>Expenses with automatic balance calculation and minimized settlements.</sub></td>
+    <td width="50%"><img src="./docs/assets/turni-pulizie.png" alt="Cleaning rotation"><br><sub>Weekly cleaning rotation by member and task.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./docs/assets/calendario.png" alt="Unified calendar"><br><sub>Unified calendar with recurring shifts and events.</sub></td>
+    <td width="50%"><img src="./docs/assets/lista-spesa.png" alt="Shopping list"><br><sub>Real-time shopping list with purchased-item tracking.</sub></td>
+  </tr>
+</table>
 
 ## Features
 
