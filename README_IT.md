@@ -246,6 +246,10 @@ Vedi [LICENSE.md](./LICENSE.md) per i termini completi.
 
 Se questo progetto ti è utile o interessante, lascia una stella su [GitHub](https://github.com/AndreaBonn/RoomMatesByBonn). Aiuta altri a scoprirlo.
 
+RoomMate App è gratuita. Se ti è utile e vuoi contribuire, puoi lasciare un'offerta tramite PayPal. L'importo lo scegli tu ed è del tutto facoltativo.
+
+[![Dona con PayPal](https://img.shields.io/badge/Dona-PayPal-00457C?logo=paypal&logoColor=white&style=for-the-badge)](https://paypal.me/AndreaBonacci19)
+
 ---
 
 [English](./README.md) · [Sicurezza](./SECURITY_IT.md) · [Feedback](./FEEDBACK_IT.md) · [Licenza](./LICENSE.md)
