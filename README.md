@@ -12,8 +12,15 @@ A Progressive Web App for managing shared households: expenses with balance calc
 
 This repository presents RoomMate App to the public. It documents what the application does and how it is built. The source code is private; see [License](#license).
 
+## Try the demo
+
+**[Open the live demo](https://roommates-app-by-bonn.web.app/login)** and click **Try the demo** on the login page. No account is needed.
+
+You land in a sample household where you live with three roommates and a few months of history: expenses and balances, cleaning shifts, the shopping list, waste collection, maintenance, the board, polls, rules and the calendar. You can add, edit and delete anything. The demo runs entirely in your browser: nothing reaches the server, and closing the tab erases your changes.
+
 ## Table of contents
 
+- [Try the demo](#try-the-demo)
 - [Overview](#overview)
 - [Screenshots](#screenshots)
 - [Features](#features)

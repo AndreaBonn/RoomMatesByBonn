@@ -12,8 +12,15 @@ Una Progressive Web App per gestire la convivenza tra coinquilini: spese con cal
 
 Questo repository è la vetrina pubblica di RoomMate App. Documenta cosa fa l'applicazione e come è costruita. Il codice sorgente è privato; vedi [Licenza](#licenza).
 
+## Prova la demo
+
+**[Apri la demo online](https://roommates-app-by-bonn.web.app/login)** e clicca **Prova la demo** nella pagina di accesso. Non serve un account.
+
+Entri in una casa di esempio dove vivi con tre coinquilini e qualche mese di storico: spese e saldi, turni di pulizia, lista della spesa, raccolta differenziata, manutenzioni, bacheca, sondaggi, regole e calendario. Puoi aggiungere, modificare ed eliminare tutto. La demo gira interamente nel browser: niente arriva al server, e chiudendo la scheda le modifiche spariscono.
+
 ## Indice
 
+- [Prova la demo](#prova-la-demo)
 - [Panoramica](#panoramica)
 - [Screenshot](#screenshot)
 - [Funzionalità](#funzionalità)
